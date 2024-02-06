@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci</title>
+</head>
+<body>
+<center>
+    <h1 style="color: darkslategray;">fibonacci</h1>
+    <script>
+
+        let number = parseInt(prompt("enter your number "));
+
+        let first = 0, second = 1, nextTerm;
+        document.write("fibonacci series =");
+
+        for(x = 1; x<number; x++){ 
+            document.write(first + "");
+            nextTerm = first + second;
+            first = second;
+            second = nextTerm;
+        }
+
+
+    </script>
+
+</center>
+    
+</body>
+</html>
