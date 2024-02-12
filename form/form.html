@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset style="width: 350px; height: 250px; background-color: aqua;">
+
+    <form action="#" name="frm" style="width: 200px; margin: 0px auto; border: 1px solid green; padding: 10px;">
+
+        <div>name <br/>
+            <input type="text" name="textName">
+        </div>
+
+        <div>Address <br/>
+        <textarea name="address" ></textarea>
+        </div>
+
+        <div>email <br/> 
+            <textarea name="textEmail"></textarea>
+        </div> 
+
+        <div>Gender<br/> 
+            <input type="radio" name="radio" value ="Male" />Male
+            <input type="radio" name="radio" value ="Female" />Female
+            <input type="radio" name="radio" value ="Other" />Other
+        </div>
+
+<!-- 
+        <div>Group<br/> 
+            <input type="radio" name="checkbox" value ="Scince" />Scince
+            <input type="radio" name="checkbox" value ="Arts" />Arts
+            <input type="radio" name="checkbox" value ="Comerce" />Comerce
+        </div> -->
+        
+        
+        <div>
+            <input type="button" onclick="disply()" value="submit" />
+        </div>
+            </form>
+
+        </fieldset>
+
+
+        <script>
+
+
+            function disply(){ 
+                let first = document.frm.textName.value;
+                let second = document.frm.address.value;
+                let third = document.frm.textEmail.value;
+
+                let four = "";
+
+                for(x=0; x<document.frm.radio.length; x++){ 
+                    if(document.frm.radio[x].checked){ 
+                        four=document.frm.radio[x].value;
+                    }
+                }
+
+
+                win = open("","","width=300px,height=200px")
+
+            with(win.document){ 
+                write("Name:" + first + "<br/>");
+                write("Adress :" + second+ "<br/>");
+                write("Email :" + third + "<br/>");
+                write("Gender :" + four+ "<br/>");
+
+                write("<input type='button' value='close me' onclick='self.close();' />");
+                write("<input type='button' value='print' onclick='self.print();' />");
+               
+            }
+
+
+            }
+
+
+            // create new window 
+
+            
+
+         
+
+
+
+        </script>
+
+
+
+
+
+   
+        
+    
+</body>
+</html>
